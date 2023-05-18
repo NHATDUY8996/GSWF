@@ -1,0 +1,34 @@
+/* checked nav */
+.menu__info {
+  visibility: hidden;
+  opacity: 0;
+  width: 380px;
+  height: 100vh;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  background-color: var(--color-black);
+  box-shadow: 0 0 6px #96c3f3;
+  transform: translateX(100%);
+  transition: all linear 0.2s;
+}
+.overlaynav {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  animation: all linear 0.2s;
+}
+.nav__input:checked~.overlaynav {
+ display: block;
+}
+.nav__input:checked~.menu__info {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+/* checked nav */
+
+
